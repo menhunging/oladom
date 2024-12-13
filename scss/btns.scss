@@ -29,6 +29,11 @@
     color: $colorBlack;
   }
 
+  &--dark {
+    background-color: $colorBlack;
+    color: $colorWhite;
+  }
+
   &--border-yellow {
     border: solid 1px $colorYellow;
     color: $colorYellow;

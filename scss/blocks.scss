@@ -3610,7 +3610,6 @@
     }
 
     .caption {
-      color: rgba(159, 159, 159, 1);
     }
   }
 
@@ -4238,6 +4237,250 @@
 
     & + .check-block {
       margin-top: 16px;
+    }
+  }
+}
+
+.title-page {
+  color: rgba(159, 159, 159, 1);
+}
+
+.contacts {
+  @include responsive1439 {
+    padding: 32px 0 0;
+  }
+}
+
+.contacts-map {
+  position: relative;
+  min-height: 800px;
+  width: 100%;
+  margin-top: 60px;
+
+  @include responsive1599 {
+    min-height: 700px;
+    margin-top: 40px;
+  }
+
+  @include responsive1279 {
+    min-height: 476px;
+  }
+
+  @include responsive767 {
+    min-height: initial;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 16px;
+  }
+
+  .contacts-map__list {
+    background-color: rgba(79, 79, 79, 1);
+    color: $colorWhite;
+    width: 458px;
+    position: absolute;
+    right: 121px;
+    top: 0;
+    z-index: 3;
+
+    @include responsive1279 {
+      right: 80px;
+      width: 300px;
+    }
+
+    @include responsive1023 {
+      right: 40px;
+    }
+
+    @include responsive767 {
+      position: relative;
+      right: auto;
+      top: auto;
+      width: 100%;
+    }
+  }
+
+  .contacts-map__item {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+
+    @include responsive1279 {
+      padding: 16px 24px;
+    }
+
+    & + .contacts-map__item {
+      border-top: solid 1px $colorWhite;
+    }
+
+    a {
+      @include text-decoration-hover($colorWhite);
+    }
+  }
+
+  .title {
+    color: $colorYellow;
+    display: block;
+    width: 100%;
+    margin-bottom: 13px;
+    font-weight: 400;
+
+    @include responsive1279 {
+      margin-bottom: 4px;
+    }
+  }
+
+  .contacts-map__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @include responsive767 {
+      width: 100%;
+      height: 230px;
+      position: relative;
+    }
+  }
+}
+
+.contacts-form {
+  @include responsive1439 {
+    padding: 32px 0;
+  }
+
+  .contacts-form__inner {
+    position: relative;
+    min-height: 473px;
+    display: flex;
+    flex-direction: column;
+
+    @include responsive1599 {
+      min-height: 372px;
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    top: 0;
+    left: -160px;
+    width: 904px;
+    height: 473px;
+
+    @include responsive1599 {
+      width: 700px;
+      height: 372px;
+      left: -83px;
+    }
+
+    @include responsive1439 {
+      width: 556px;
+      height: 372px;
+      left: -60px;
+    }
+
+    @include responsive1279 {
+      left: -140px;
+    }
+
+    @include responsive1023 {
+      left: auto;
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding-top: calc(270 / 320 * 100%);
+    }
+  }
+
+  .contacts-form__right {
+    width: 672px;
+    margin-left: auto;
+    margin-top: auto;
+
+    @include responsive1599 {
+      max-width: 520px;
+    }
+
+    @include responsive1439 {
+      max-width: 457px;
+    }
+
+    @include responsive1023 {
+      max-width: 100%;
+      width: 100%;
+      margin-top: 16px;
+      max-width: 580px;
+      margin-left: 0;
+    }
+  }
+
+  .title {
+    color: rgba(159, 159, 159, 1);
+    position: relative;
+    margin-bottom: 40px;
+    display: block;
+
+    @include before {
+      left: 0;
+      top: calc(100% + 6px);
+      width: 50%;
+      height: 1px;
+      background-color: rgba(159, 159, 159, 1);
+    }
+  }
+
+  .input-item {
+    input {
+      width: 100%;
+      height: 70px;
+      border: solid 1px rgba(45, 42, 40, 0.5);
+      padding: 0 24px;
+      color: rgba(45, 42, 40, 1);
+      font-size: 20px;
+      line-height: 23px;
+
+      @include responsive1599 {
+        height: 50px;
+      }
+
+      @include responsive1023 {
+        font-family: 16px;
+        line-height: 18px;
+      }
+
+      &::placeholder {
+        color: rgba(45, 42, 40, 0.3);
+      }
+    }
+
+    & + .input-item {
+      margin-top: 16px;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='35' height='36' viewBox='0 0 35 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.999158 34.4992L33.9975 1.50084M33.9975 1.50084H0.999158M33.9975 1.50084V34.4992' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    background-position: calc(100% - 31px) center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    text-align: left;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 16px;
+    height: 70px;
+    font-weight: 400;
+
+    @include responsive1599 {
+      height: 50px;
+      min-height: initial;
+      background-size: 20px;
+      padding: 0 16px;
+    }
+
+    @include responsive1023 {
+      font-family: 16px;
+      line-height: 18px;
     }
   }
 }

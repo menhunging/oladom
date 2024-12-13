@@ -59,17 +59,7 @@ $(document).ready(function () {
   //     });
   //   });
   // }
-  // if ($(".phone-input").length > 0) {
-  //   $(".phone-input").map(function () {
-  //     $(this).inputmask({
-  //       mask: "+7(999) 999-99-99",
-  //       placeholder: "*",
-  //       showMaskOnHover: false,
-  //       showMaskOnFocus: true,
-  //       clearIncomplete: true,
-  //     });
-  //   });
-  // }
+
   // if ($(".slider-hot").length > 0) {
   //   const swiper = new Swiper(".slider-hot", {
   //     slidesPerView: 4,
@@ -163,6 +153,18 @@ $(document).ready(function () {
   //   }
   //   sliders.length && sliderinit();
   // }
+
+  if ($(".phone-input").length > 0) {
+    $(".phone-input").map(function () {
+      $(this).inputmask({
+        mask: "+7(999) 999-99-99",
+        placeholder: "*",
+        showMaskOnHover: false,
+        showMaskOnFocus: true,
+        clearIncomplete: true,
+      });
+    });
+  }
 
   if ($("[data-fancybox]").length > 0) {
     Fancybox.bind("[data-fancybox]", {
