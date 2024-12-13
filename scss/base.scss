@@ -252,30 +252,43 @@ picture {
   border: 0;
   background: transparent;
   width: 100%;
-  height: 47px;
+  height: 70px;
   width: 100%;
   border-radius: 0;
 
+  @include responsive1279{
+    height: 50px;
+  }
+
   .label {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
     height: 100%;
-    padding: 10px 0;
-    padding-right: 15px;
+    padding: 24px;
+    line-height: 24px;
+    font-family: 20px;
     margin: 0;
     color: $colorBlack;
+    border: solid 1px rgba(159, 159, 159, 1);
+
+    @include responsive1279{
+      padding: 14px 24px;
+      line-height: 20px;
+    }
   }
 
   .button {
-    width: 48px;
-    height: 100%;
+    width: 24px;
+    height: 24px;
     background: transparent;
     display: flex;
-    background-image: url("../img/arrow_bottom.svg");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='8' viewBox='0 0 15 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 1L7.5 7L13.5 1' stroke='%23222222' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 12px;
     transition: all 0.3s;
+    top:50%;
+    right: 24px;
+    margin-top: -12px;
 
     &::after {
       display: none;
@@ -286,6 +299,11 @@ picture {
 .selectric-wrapper {
   border: 0;
   outline: none;
+  height: 70px;
+
+  @include responsive1279{
+    height: 50px;
+  }
 
   &.selectric-hover {
     .selectric {
@@ -318,7 +336,7 @@ picture {
   background-color: $colorWhite;
   border: 1px solid $colorBlack;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 0;
   box-shadow: none;
   z-index: -1;
   min-width: 140px;
@@ -761,6 +779,10 @@ div {
       line-height: 24px;
     }
 
+    @include responsive767{
+      line-height: 18px;
+    }
+
     @include before {
       left: 0;
       top: 2px;
@@ -797,7 +819,8 @@ section {
   line-height: 28px;
 
   @include responsive1279 {
-    padding: 60px 0;
+    // padding: 60px 0;
+    padding: 32px 0;
     font-size: 12px;
     line-height: 16px;
   }

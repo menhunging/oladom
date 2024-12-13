@@ -50,15 +50,6 @@ $(document).ready(function () {
   //     $(this).toggleClass("opened").next(".faq-body").stop().slideToggle();
   //   });
   // }
-  // if ($(".selectric").length > 0) {
-  //   $(".selectric").map(function () {
-  //     $(this).selectric({
-  //       onOpen: function (element) {},
-  //       onChange: function (element) {},
-  //       onClose: function (element) {},
-  //     });
-  //   });
-  // }
 
   // if ($(".slider-hot").length > 0) {
   //   const swiper = new Swiper(".slider-hot", {
@@ -153,6 +144,16 @@ $(document).ready(function () {
   //   }
   //   sliders.length && sliderinit();
   // }
+
+  if ($(".selectric").length > 0) {
+    $(".selectric").map(function () {
+      $(this).selectric({
+        onOpen: function (element) {},
+        onChange: function (element) {},
+        onClose: function (element) {},
+      });
+    });
+  }
 
   if ($(".phone-input").length > 0) {
     $(".phone-input").map(function () {
@@ -461,6 +462,12 @@ $(document).ready(function () {
       if (!$(event.target).closest(".btn-filter, .filter").length) {
         $(".filter").removeClass("opened");
       }
+    });
+  }
+
+  if ($(".faq-block__quest").length > 0) {
+    $(".faq-block__quest").on("click", function () {
+      $(this).toggleClass("opened").next().stop().slideToggle();
     });
   }
 
