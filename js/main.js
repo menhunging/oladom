@@ -211,7 +211,7 @@ $(document).ready(function () {
     const swiper = new Swiper(".marquee-block__slider", {
       slidesPerView: 1,
       spaceBetween: 32,
-      speed: 2000,
+      speed: 5500,
       loop: true,
       autoplay: {
         delay: 0,
@@ -394,6 +394,67 @@ $(document).ready(function () {
   if ($(".faq-block__quest").length > 0) {
     $(".faq-block__quest").on("click", function () {
       $(this).toggleClass("opened").next().stop().slideToggle();
+    });
+  }
+
+  if ($(".basket-slider").length > 0) {
+    const sliders = document.querySelectorAll(".basket-slider");
+
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        // let prev = $(slider).closest(".attractions").find(".swiperBtnPrev")[0];
+        // let next = $(slider).closest(".attractions").find(".swiperBtnNext")[0];
+
+        if (!slider.swiper) {
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            watchSlidesProgress: true,
+            loop: false,
+            pagination: {
+              clickable: true,
+              el: ".swiper-pagination",
+            },
+            // navigation: {
+            //   prevEl: prev,
+            //   nextEl: next,
+            // },
+            // on: {
+            //   init: function (swiper) {},
+            //   slideChange: function (swiper) {},
+            // },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($(".modal").length > 0) {
+    MicroModal.init({
+      openTrigger: "data-modal",
+      disableScroll: true,
+      awaitOpenAnimation: true,
+      awaitCloseAnimation: true,
+
+      onShow: () => {
+        $("body").addClass("modal-open");
+      },
+
+      onClose: () => {
+        setTimeout(() => {
+          $("body").removeClass("modal-open");
+        }, 300);
+      },
+    });
+
+    $("[data-modal]").map(function () {
+      $(this).click((e) => e.preventDefault());
     });
   }
 

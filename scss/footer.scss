@@ -246,3 +246,62 @@
     }
   }
 }
+
+.footer-market {
+
+  .footer-left{
+    width: 434px;
+
+    @include responsive767{
+      width: 100%;
+    }
+
+    .text{
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .footer-col{
+    & > a{
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+  }
+
+  .footer-right{
+    text-align: right;
+    align-items: flex-end;
+
+    @include responsive767{
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .phone{
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 700;
+      
+      @include responsive767{
+        font-size: 18px;
+      }
+    }
+  }
+
+  .footer-bottom {
+    justify-content: space-between;
+    position: relative;
+
+    @include before{
+      width: 300%;
+      left:-100%;
+      border-top: solid 1px $colorWhite;
+      top:0;
+    }
+  }
+}

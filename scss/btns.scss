@@ -182,7 +182,19 @@
   background-size: contain;
   width: 24px;
   height: 24px;
+  transition: transform 0.3s;
 
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+.btn-delete {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.5 1.19238H17.5M1.5 5.19238H25.5M22.8333 5.19238L21.8983 19.2181C21.758 21.3224 21.6879 22.3746 21.2334 23.1724C20.8332 23.8748 20.2297 24.4394 19.5022 24.792C18.676 25.1924 17.6215 25.1924 15.5125 25.1924H11.4875C9.37854 25.1924 8.32404 25.1924 7.49778 24.792C6.77034 24.4394 6.16678 23.8748 5.76664 23.1724C5.31215 22.3746 5.242 21.3224 5.10171 19.2181L4.16667 5.19238M10.8333 11.1924V17.859M16.1667 11.1924V17.859' stroke='%239F9F9F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
   transition: transform 0.3s;
 
   &:hover {

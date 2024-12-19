@@ -419,14 +419,14 @@ picture {
   margin: 0;
   background-color: $colorWhite;
   position: relative;
-  padding: 80px 100px;
+  padding: 60px;
 
   @include responsive1279 {
     padding: 40px 50px;
   }
 
   @include responsive767 {
-    padding: 20px;
+    padding: 16px;
   }
 
   .link {
