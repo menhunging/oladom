@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
-    <title>Модальные окна</title>
+
+    <title>Блог</title>
 
     <link rel="icon" type="image/png" href="../../img/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../../img/favicon/favicon.svg" />
@@ -23,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 
-<body class="market-page">
+<body class="inner-page">
 
     <div class="site-wrapper">
 
@@ -85,13 +86,15 @@
                         </a>
                     </div>
 
-                    <div class="header-market-link">
-                        <a href="tel:+78612066091" class="header-market-link__phone">+7 861 206 60 91</a>
-                        <a href="#" class="header-market-link__link">Обратный звонок</a>
-                        <!-- <a href="#" class="header-market-link__adress"></a> -->
-                        <a href="#" class="sidebar__icon sidebar__search"></a>
-                        <a href="#" class="sidebar__icon sidebar__basket"></a>
-                        <a href="#" class="btn-favorite"></a>
+                    <ul class="header-links">
+                        <li><a href="#" class="header-link header-link--shop">Интернет-магазин</a></li>
+                        <li><a href="#" class="header-link">B2B</a></li>
+                    </ul>
+
+                    <div class="lang">
+                        <a href="#" class="lang-link">RU</a>
+                        <span class="lang-text">/</span>
+                        <a href="#" class="lang-link">EN</a>
                     </div>
 
                     <button class="burger"></button>
@@ -100,20 +103,159 @@
         </header>
 
         <main class="main">
-            <div class="container">
-                <br />
-                <br />
-                <a href="#" data-modal="modal-call">Форма</a>
-                <br />
-                <br />
-                <a href="#" data-modal="modal-file">Файлы</a>
-                <br />
-                <br />
-                <a href="#" data-modal="modal-sub">Подпишитесь на наши новости</a>
-                <br />
-                <br />
-                <a href="#" data-modal="modal-callback">Обратный звонок</a>
-            </div>
+
+            <section class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs-list">
+                        <li class="breadcrumbs-item">
+                            <a href="#" class="breadcrumbs-link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs-item">
+                            <a href="#" class="breadcrumbs-link">Блог</a>
+                        </li>
+                        <li class="breadcrumbs-item">
+                            <span class="breadcrumbs-link">“Ola Dom” принял участие в выставке HouseHold Expo</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="blog-article-media">
+                <div class="container">
+                    <h1 class="caption caption--h1">“Ola Dom” <strong>принял участие</strong> в выставке HouseHold Expo
+                    </h1>
+                </div>
+                <picture>
+                    <source type="image/webp" srcset="./../../img/pic-grettings.webp" />
+                    <img src="./../../img/pic-grettings.jpg" alt="">
+                </picture>
+            </section>
+
+            <section class="blog-article">
+                <div class="container">
+                    <strong>Повседневная практика показывает, что глубокий уровень погружения не оставляет шанса для
+                        новых предложений. Также как глубокий уровень погружения является качественно новой ступенью
+                        приоретизации разума над эмоциями. </strong>
+
+                    <p>
+                        Повседневная практика показывает, что глубокий уровень погружения не оставляет шанса для
+                        новых предложений. Также как глубокий уровень погружения является качественно новой
+                        ступенью приоретизации разума над эмоциями. Также как внедрение современных методик
+                        способствует подготовке и реализации инновационных методов управления процессами.
+                    </p>
+
+                    <div class="about-section__media">
+                        <div class="picture-block">
+                            <picture>
+                                <source type="image/webp" srcset="./../../img/pic-cooperation.webp">
+                                <img src="./../../img/pic-cooperation.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="picture-block">
+                            <picture>
+                                <source type="image/webp" srcset="./../../img/pic-cooperation.webp">
+                                <img src="./../../img/pic-cooperation.jpg" alt="">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <p>Повседневная практика показывает, что глубокий уровень погружения не оставляет шанса
+                        для
+                        новых предложений. Также как глубокий уровень погружения является качественно новой
+                        ступенью приоретизации разума над эмоциями. Также как внедрение современных методик
+                        способствует подготовке и реализации инновационных методов управления процессами.
+                    </p>
+
+                    <p>Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь
+                        ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь
+                        благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев
+                        находят
+                        свой новый дом.</p>
+
+                    <p>Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь
+                        ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь
+                        благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев
+                        находят
+                        свой новый дом.</p>
+
+
+                    <div class="slider-media swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="picture-block">
+                                    <a href="./../../img/pic-grettings.webp" data-fancybox=""></a>
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-grettings.webp" />
+                                        <img src="./../../img/pic-grettings.jpg" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="picture-block">
+                                    <a href="./../../img/pic-grettings.webp" data-fancybox=""></a>
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-grettings.webp" />
+                                        <img src="./../../img/pic-grettings.jpg" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-controls">
+                            <div class="swiper-pagination"></div>
+                            <button class="swiperBtn swiperBtnPrev"></button>
+                            <button class="swiperBtn swiperBtnNext"></button>
+                        </div>
+                    </div>
+
+                    <section class="about-section">
+                        <div class="about-section__list">
+                            <ul>
+                                <li>Повседневная практика показывает, что глубокий уровень погружения не оставляет
+                                    шанса
+                                    для новых предложений. Также как глубокий уровень погружения является
+                                    качественно
+                                    новой ступенью приоретизации разума над эмоциями. </li>
+
+                                <li>Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось
+                                    иметь
+                                    ласковых хозяев и тёплый кров. </li>
+
+                                <li>Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось
+                                    иметь
+                                    ласковых хозяев и тёплый кров. Один из проверенных способов это сделать.</li>
+                            </ul>
+
+                            <ol>
+                                <li>Повседневная практика показывает, что глубокий уровень погружения не оставляет
+                                    шанса
+                                    для новых предложений. Также как глубокий уровень погружения является
+                                    качественно
+                                    новой ступенью приоретизации разума над эмоциями. </li>
+
+                                <li>Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось
+                                    иметь
+                                    ласковых хозяев и тёплый кров. </li>
+
+                                <li>Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось
+                                    иметь
+                                    ласковых хозяев и тёплый кров. Один из проверенных способов это сделать.</li>
+                            </ol>
+                        </div>
+                        <div class="about-section__media">
+                            <div class="picture-block">
+                                <picture>
+                                    <source type="image/webp" srcset="./../../img/pic-cooperation.webp">
+                                    <img src="./../../img/pic-cooperation.jpg" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+
+            </section>
+
         </main>
 
         <footer class="footer">
@@ -260,169 +402,6 @@
     </div>
 
 </body>
-
-<div class="micromodal-slide modal" id="modal-call" aria-hidden="true">
-    <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
-    <div class="modal__container" role="dialog" aria-modal="true">
-        <div class="modal__inner">
-
-            <div class="modal__content" autocomplete="off">
-                <div class="modal__head">
-                    <div class="modal__head__col">
-                        <span class="caption" download="">Скачать</span>
-                    </div>
-                    <div class="modal__head__col">
-                        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                    </div>
-                    <div class="modal__head__col">
-                        <a href="#" class="btn btn-back btn--border-dark">Назад</a>
-                    </div>
-                </div>
-                <div class="modal__form">
-                    <span class="modal__form__desc">Если вы хотите скачать файл, то заполните поля ниже</span>
-
-                    <div class="input-list">
-                        <div class="input-item">
-                            <input type="text" placeholder="ФИО">
-                        </div>
-                        <div class="input-item">
-                            <select class="selectric">
-                                <option value="">Статус 1</option>
-                                <option value="">Статус 2</option>
-                                <option value="">Статус 3</option>
-                            </select>
-                        </div>
-                        <div class="input-item input-item--phone">
-                            <input type="text" placeholder="Телефон" class="phone-input">
-                        </div>
-                        <div class="input-item input-item--email">
-                            <input type="text" placeholder="E-mail">
-                        </div>
-                        <div class="input-item">
-                            <input type="text" placeholder="Комментарии">
-                        </div>
-                    </div>
-
-                    <button class="btn btn--yellow">Отправить</button>
-
-                    <div class="modal__form__text">
-                        Отправляя форму, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="micromodal-slide modal" id="modal-file" aria-hidden="true">
-    <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
-    <div class="modal__container" role="dialog" aria-modal="true">
-        <div class="modal__inner">
-
-            <div class="modal__content" autocomplete="off">
-                <div class="modal__head">
-                    <div class="modal__head__col">
-                        <span class="link-download" download="">Скачать</span>
-                    </div>
-                    <div class="modal__head__col">
-                        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                    </div>
-                </div>
-                <ul class="list-file">
-                    <li>
-                        <a href="#" download="">Буклет изделия</a>
-                    </li>
-                    <li>
-                        <a href="#" download="" class="lock">PDF</a>
-                    </li>
-                    <li>
-                        <a href="#" download="" class="lock">2D файл</a>
-                    </li>
-                    <li>
-                        <a href="#" download="" class="lock">HD изображение</a>
-                    </li>
-                    <li>
-                        <a href="#" download="" class="lock">3D файл</a>
-                    </li>
-                    <li>
-                        <a href="#" download="" class="lock">Сертификат</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="micromodal-slide modal" id="modal-sub" aria-hidden="true">
-    <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
-    <div class="modal__container" role="dialog" aria-modal="true">
-        <div class="modal__inner">
-
-            <div class="modal__content" autocomplete="off">
-                <div class="modal__head">
-                    <div class="modal__head__col">
-                        <span class="caption" download="">Подпишитесь на наши новости</span>
-                    </div>
-                    <div class="modal__head__col">
-                        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                    </div>
-                </div>
-                <div class="modal__form">
-                    <div class="input-list">
-                        <div class="input-item">
-                            <input type="text" placeholder="ФИО">
-                        </div>
-                        <div class="input-item input-item--email">
-                            <input type="text" placeholder="E-mail">
-                        </div>
-                    </div>
-
-                    <button class="btn btn--yellow">Отправить</button>
-                    <div class="modal__form__text">
-                        Отправляя форму, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="micromodal-slide modal" id="modal-callback" aria-hidden="true">
-    <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
-    <div class="modal__container" role="dialog" aria-modal="true">
-        <div class="modal__inner">
-
-            <div class="modal__content" autocomplete="off">
-                <div class="modal__head">
-                    <div class="modal__head__col">
-                        <span class="caption" download="">Обратный звонок</span>
-                    </div>
-                    <div class="modal__head__col">
-                        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                    </div>
-                    <div class="modal__head__col">
-                        <p>Оставьте свои данные и мы вам перезвоним</p>
-                    </div>
-                </div>
-                <div class="modal__form">
-                    <div class="input-list">
-                        <div class="input-item">
-                            <input type="text" placeholder="ФИО">
-                        </div>
-                        <div class="input-item input-item--email">
-                            <input type="tel" placeholder="Телефон" class="phone-input">
-                        </div>
-                    </div>
-
-                    <button class="btn btn--yellow">Отправить</button>
-                    <div class="modal__form__text">
-                        Отправляя форму, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script src="../../libs/jquery/jquery-3.7.1.min.js"></script>
 <script src="../../libs/swiper/swiper-bundle.min.js"></script>

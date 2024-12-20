@@ -155,6 +155,22 @@
     background-size: contain;
   }
 
+  &.active {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @include before {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    right: 1px;
+    top: 1px;
+    opacity: 0;
+  }
+
   &:hover {
     transform: scale(0.9);
   }

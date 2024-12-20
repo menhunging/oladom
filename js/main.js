@@ -466,6 +466,22 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".list-file").length > 0) {
+    $(".list-file .lock").on("click", function (event) {
+      event.preventDefault();
+
+      $("#modal-file").addClass("transparent");
+
+      $("#modal-call [data-micromodal-close]").on("click", function () {
+        $("#modal-file").removeClass("transparent");
+      });
+
+      setTimeout(() => {
+        MicroModal.show("modal-call");
+      }, 300);
+    });
+  }
+
   // if ($(".filter-head").length > 0) {
   //   const filterWrapper = $(".filter-wrapper");
   //   const filter = $(".filter");
