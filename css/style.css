@@ -6708,7 +6708,7 @@ h4,
 }
 .delivery-adv ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 @media (max-width: 1279px) {
@@ -6727,6 +6727,9 @@ h4,
     align-items: center;
     gap: 16px;
   }
+}
+.delivery-adv li:not(:first-child) p {
+  max-width: 330px;
 }
 .delivery-adv .delivery-adv__icon {
   width: 45px;
