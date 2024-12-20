@@ -1,24 +1,20 @@
 .header {
   padding: 25px 0;
   font-weight: 500;
-  width: calc(100% - 80px);
+  width: 100%;
   position: fixed;
   top: 0;
-  left: 80px;
+  left: 0;
   z-index: 5;
   transition: all 0.3s;
 
   @include responsive1279 {
     padding: 25px 0;
-    left: 60px;
-    width: calc(100% - 60px);
   }
 
   @include responsive767 {
     padding: 10px 0;
     min-height: 50px;
-    left: 0;
-    width: 100%;
   }
 
   &__inner {
@@ -45,33 +41,35 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-60%, -39%);
+    transform: translate(-50%, -40%);
     margin-top: -3px;
 
     @include responsive1279 {
-      transform: translate(-56%, -46%);
-    }
-
-    @include responsive1023 {
-      transform: translate(-135%, -46%);
+      transform: translate(-45%, -45%);
+      width: 106px;
+      height: 16px;
     }
 
     @include responsive767 {
       transform: initial;
-      top: 10px;
+      top: 4px;
       left: 0;
       position: relative;
     }
 
     &:hover {
-      transform: translate(-60%, -39%) scale(0.95);
+      transform: translate(-50%, -40%) scale(0.95);
 
       @include responsive1279 {
-        transform: translate(-56%, -46%) scale(0.95);
+        transform: translate(-45%, -45%) scale(0.95);
       }
 
       @include responsive1023 {
-        transform: translate(-135%, -46%) scale(0.95);
+        transform: translate(-45%, -45%) scale(0.95);
+      }
+
+      @include responsive767 {
+        transform: scale(0.95);
       }
     }
   }
@@ -80,6 +78,10 @@
     background-color: $colorWhite;
     box-shadow: 0px 2px 5px $colorBlack-a3;
 
+    .burger {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 7H19M1 1H19M1 13H13' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    }
+
     .logo {
       filter: invert(1);
     }
@@ -87,6 +89,12 @@
     a:not(.header-link--shop) {
       color: $colorBlack;
       @include text-decoration-hover($colorBlack);
+    }
+
+    .header-link--arrow {
+      &::before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 0.999999L7 7L13 1' stroke='%23222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+      }
     }
   }
 }
@@ -129,7 +137,7 @@
   line-height: 19px;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 18px;
 
   @include responsive1439 {
     font-size: 12px;
@@ -157,6 +165,15 @@
   .header-market-link__link {
     text-decoration: underline;
     transition: text-decoration 0.3s;
+    margin: 0 16px;
+
+    @include responsive1439 {
+      margin: 0 8px;
+    }
+
+    @include responsive1279 {
+      margin: 0;
+    }
 
     &:hover {
       text-decoration-color: transparent;
@@ -186,3 +203,139 @@
   }
 }
 
+.header-menu {
+  font-size: 16px;
+  line-height: 20px;
+
+  @include responsive1439 {
+    font-size: 14px;
+  }
+
+  @include responsive1279 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  @include responsive767 {
+    display: none;
+  }
+
+  & > ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include responsive1023 {
+      gap: 12px;
+    }
+
+    li {
+      position: relative;
+
+      &:hover {
+        .header-menu__sub {
+          display: block;
+
+          &::before {
+            transform: scale(-1, -1);
+          }
+        }
+      }
+    }
+  }
+
+  .header-menu__sub {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    padding-top: 7px;
+
+    ul {
+      position: relative;
+      background: linear-gradient(
+          106.1deg,
+          rgba(0, 0, 0, 0) 42%,
+          rgba(0, 0, 0, 0.4) 97.01%
+        ),
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.4) 18.7%,
+          rgba(0, 0, 0, 0) 34.33%
+        );
+      padding: 16px 32px;
+      background-color: rgba(34, 34, 34, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    li + li {
+      margin-top: 16px;
+    }
+
+    a:not(.active) {
+      color: $colorWhite !important;
+
+      &:hover {
+        text-decoration-color: $colorWhite !important;
+      }
+    }
+
+    &:hover {
+      display: block;
+
+      & ~ .header-link--arrow {
+        &::before {
+          transform: scale(-1, -1);
+        }
+      }
+    }
+  }
+
+  .header-link--arrow {
+    position: relative;
+    padding-right: 24px;
+
+    @include before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 0.999999L7 7L13 1' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+      background-size: 10px;
+      right: 0;
+      top: -2px;
+
+      @include responsive1279 {
+        top: -4px;
+      }
+    }
+
+    &:hover {
+      &::before {
+        transform: scale(-1, -1);
+      }
+    }
+  }
+
+  .active {
+    color: $colorYellow !important;
+
+    &:hover {
+      text-decoration-color: $colorYellow !important;
+    }
+  }
+}
+
+.header-menu-li--long {
+  @include responsive1599 {
+    display: none;
+  }
+}
+
+.header-menu-li--small {
+  display: none;
+
+  @include responsive1599 {
+    display: flex;
+  }
+}

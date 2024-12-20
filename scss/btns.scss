@@ -145,13 +145,14 @@
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
-  background-size: contain;
+  background-size: 18px;
   transition: transform 0.3s;
   display: block;
 
   @include responsive1439 {
     width: 16px;
     height: 16px;
+    background-size: contain;
   }
 
   &:hover {

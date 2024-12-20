@@ -12,12 +12,6 @@
   padding: 32px 0;
   z-index: 6;
 
-  &.fixed {
-    .burger {
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 7H19M1 1H19M1 13H13' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
-    }
-  }
-
   @include responsive1279 {
     width: 60px;
   }
@@ -33,36 +27,6 @@
     right: 0;
     height: auto;
     position: fixed;
-  }
-
-  .sidebar__icon {
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 24px;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.3s;
-
-    @include responsive1279 {
-      display: none;
-    }
-
-    & + .sidebar__icon {
-      margin-top: 32px;
-    }
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  .sidebar__basket {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.00014 14H18.1359C19.1487 14 19.6551 14 20.0582 13.8112C20.4134 13.6448 20.7118 13.3777 20.9163 13.0432C21.1485 12.6633 21.2044 12.16 21.3163 11.1534L21.9013 5.88835C21.9355 5.58088 21.9525 5.42715 21.9031 5.30816C21.8597 5.20366 21.7821 5.11697 21.683 5.06228C21.5702 5 21.4155 5 21.1062 5H4.50014M2 2H3.24844C3.51306 2 3.64537 2 3.74889 2.05032C3.84002 2.09463 3.91554 2.16557 3.96544 2.25376C4.02212 2.35394 4.03037 2.48599 4.04688 2.7501L4.95312 17.2499C4.96963 17.514 4.97788 17.6461 5.03456 17.7462C5.08446 17.8344 5.15998 17.9054 5.25111 17.9497C5.35463 18 5.48694 18 5.75156 18H19M7.5 21.5H7.51M16.5 21.5H16.51M8 21.5C8 21.7761 7.77614 22 7.5 22C7.22386 22 7 21.7761 7 21.5C7 21.2239 7.22386 21 7.5 21C7.77614 21 8 21.2239 8 21.5ZM17 21.5C17 21.7761 16.7761 22 16.5 22C16.2239 22 16 21.7761 16 21.5C16 21.2239 16.2239 21 16.5 21C16.7761 21 17 21.2239 17 21.5Z' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
-  }
-
-  .sidebar__search {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 19L13.0001 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
   }
 
   .sidebar__whatsapp {
@@ -3740,16 +3704,15 @@
     position: relative;
     height: 371px;
 
-    &:hover{
-
-      .link-site{
-        &::before{
+    &:hover {
+      .link-site {
+        &::before {
           width: 100%;
         }
       }
 
-      .picture-block{
-        transform: scale(.9);
+      .picture-block {
+        transform: scale(0.9);
       }
     }
 
@@ -3788,7 +3751,7 @@
   .picture-block {
     width: 100%;
     height: 284px;
-    transition: transform .3s;
+    transition: transform 0.3s;
 
     @include responsive1279 {
       height: 323px;
@@ -4975,51 +4938,52 @@
   }
 
   .partners__head {
-    ul {
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
 
-      li {
-        flex: 1;
-        max-width: 283px;
-        width: 100%;
+    li {
+      flex: 1;
+      max-width: 283px;
+      width: 100%;
 
-        @include responsive1279 {
-          max-width: 150px;
-        }
-
-        @include responsive767 {
-          max-width: 100%;
+      &.active {
+        a {
+          background-color: $colorBlack;
+          color: $colorWhite;
         }
       }
 
-      a {
-        width: 100%;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: color 0.3s;
+      @include responsive1279 {
+        max-width: 150px;
+      }
 
-        @include responsive1279 {
-          height: 50px;
-        }
+      @include responsive767 {
+        max-width: 100%;
+      }
+    }
 
-        &:hover {
-          background-color: $colorBlack;
-          color: $colorWhite;
-        }
+    a {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.3s;
 
-        &.active {
-          background-color: $colorBlack;
-          color: $colorWhite;
-        }
+      @include responsive1279 {
+        height: 50px;
+      }
+
+      &:hover {
+        background-color: $colorBlack;
+        color: $colorWhite;
       }
     }
   }
   .partners__body {
     padding: 60px 0;
     position: relative;
+    min-height: 532px;
 
     @include responsive1279 {
       padding: 32px 0;
@@ -6294,12 +6258,11 @@
     }
   }
 
-  .link-download {
+  .caption {
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
     color: $colorBlack;
-    @include text-decoration-hover($colorBlack);
   }
 
   .modal__close {
@@ -6470,75 +6433,104 @@
 }
 
 .list-file {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 576px;
+  margin: 120px auto;
+
+  @include responsive767 {
+    margin: 80px auto;
+    gap: 16px;
+  }
+
+  @include responsive389 {
+    margin: 40px 0;
+  }
+
+  li {
+    width: calc(50% - 48px);
+
+    @include responsive767 {
+      width: calc(50% - 32px);
+    }
+
+    @include responsive389 {
+      width: 100%;
+    }
+  }
+
+  a {
+    position: relative;
+    padding-left: 24px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    max-width: 576px;
-    margin: 120px auto;
+    align-items: center;
+    gap: 20px;
+    @include text-decoration-hover($colorBlack);
+    white-space: nowrap;
 
-    @include responsive767{
-      margin: 80px auto;
-      gap:16px;
+    @include responsive767 {
+      padding-left: 16px;
+      gap: 16px;
     }
 
-    @include responsive389{
-      margin: 40px 0;
+    @include before {
+      transform: translateY(-50%);
+      top: 50%;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $colorYellow;
+      display: block;
     }
 
-    li {
-      width: calc(50% - 48px);
-
-      @include responsive767{
-        width: calc(50% - 32px);
-      }
-
-      @include responsive389{
-        width: 100%;
-      }
-    }
-
-    a {
+    @include after {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 7.75977V5.75977C14 2.99834 11.7614 0.759766 9 0.759766C6.23858 0.759766 4 2.99834 4 5.75977V7.75977M9 12.2598V14.2598M5.8 18.7598H12.2C13.8802 18.7598 14.7202 18.7598 15.362 18.4328C15.9265 18.1452 16.3854 17.6862 16.673 17.1217C17 16.48 17 15.6399 17 13.9598V12.5598C17 10.8796 17 10.0395 16.673 9.39779C16.3854 8.83331 15.9265 8.37437 15.362 8.08675C14.7202 7.75977 13.8802 7.75977 12.2 7.75977H5.8C4.11984 7.75977 3.27976 7.75977 2.63803 8.08675C2.07354 8.37437 1.6146 8.83331 1.32698 9.39779C1 10.0395 1 10.8796 1 12.5598V13.9598C1 15.6399 1 16.48 1.32698 17.1217C1.6146 17.6862 2.07354 18.1452 2.63803 18.4328C3.27976 18.7598 4.11984 18.7598 5.8 18.7598Z' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 18px;
+      height: 18px;
+      right: 0;
       position: relative;
-      padding-left: 24px;
-      display: flex;
-      align-items: center;
-      gap:20px;
-      @include text-decoration-hover($colorBlack);
-      white-space: nowrap;
+      background-size: contain;
+      display: none;
+      min-width: 18px;
+    }
 
-      @include responsive767{
-        padding-left: 16px;
-        gap:16px;
-      }
-
-      @include before {
-        transform: translateY(-50%);
-        top: 50%;
-        left: 0;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: $colorYellow;
+    &.lock {
+      &::after {
         display: block;
       }
-
-      @include after{
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 7.75977V5.75977C14 2.99834 11.7614 0.759766 9 0.759766C6.23858 0.759766 4 2.99834 4 5.75977V7.75977M9 12.2598V14.2598M5.8 18.7598H12.2C13.8802 18.7598 14.7202 18.7598 15.362 18.4328C15.9265 18.1452 16.3854 17.6862 16.673 17.1217C17 16.48 17 15.6399 17 13.9598V12.5598C17 10.8796 17 10.0395 16.673 9.39779C16.3854 8.83331 15.9265 8.37437 15.362 8.08675C14.7202 7.75977 13.8802 7.75977 12.2 7.75977H5.8C4.11984 7.75977 3.27976 7.75977 2.63803 8.08675C2.07354 8.37437 1.6146 8.83331 1.32698 9.39779C1 10.0395 1 10.8796 1 12.5598V13.9598C1 15.6399 1 16.48 1.32698 17.1217C1.6146 17.6862 2.07354 18.1452 2.63803 18.4328C3.27976 18.7598 4.11984 18.7598 5.8 18.7598Z' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 18px;
-        height: 18px;
-        right: 0;
-        position: relative;
-        background-size: contain;
-        display: none;
-        min-width: 18px;
-      }
-
-      &.lock {
-        &::after{
-          display: block;
-        }
-      }
     }
+  }
+}
+
+.sidebar__icon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s !important;
+  background-size: 18px;
+
+  @include responsive1439 {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+  }
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.sidebar__basket {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.00014 14H18.1359C19.1487 14 19.6551 14 20.0582 13.8112C20.4134 13.6448 20.7118 13.3777 20.9163 13.0432C21.1485 12.6633 21.2044 12.16 21.3163 11.1534L21.9013 5.88835C21.9355 5.58088 21.9525 5.42715 21.9031 5.30816C21.8597 5.20366 21.7821 5.11697 21.683 5.06228C21.5702 5 21.4155 5 21.1062 5H4.50014M2 2H3.24844C3.51306 2 3.64537 2 3.74889 2.05032C3.84002 2.09463 3.91554 2.16557 3.96544 2.25376C4.02212 2.35394 4.03037 2.48599 4.04688 2.7501L4.95312 17.2499C4.96963 17.514 4.97788 17.6461 5.03456 17.7462C5.08446 17.8344 5.15998 17.9054 5.25111 17.9497C5.35463 18 5.48694 18 5.75156 18H19M7.5 21.5H7.51M16.5 21.5H16.51M8 21.5C8 21.7761 7.77614 22 7.5 22C7.22386 22 7 21.7761 7 21.5C7 21.2239 7.22386 21 7.5 21C7.77614 21 8 21.2239 8 21.5ZM17 21.5C17 21.7761 16.7761 22 16.5 22C16.2239 22 16 21.7761 16 21.5C16 21.2239 16.2239 21 16.5 21C16.7761 21 17 21.2239 17 21.5Z' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+}
+
+.sidebar__search {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 19L13.0001 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
 }

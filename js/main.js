@@ -458,6 +458,14 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".tabs").length > 0) {
+    $(".tabs").tabslet({
+      mouseevent: "click",
+      attribute: "href",
+      animation: true,
+    });
+  }
+
   // if ($(".filter-head").length > 0) {
   //   const filterWrapper = $(".filter-wrapper");
   //   const filter = $(".filter");
