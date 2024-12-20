@@ -476,6 +476,10 @@ $(document).ready(function () {
         $("#modal-file").removeClass("transparent");
       });
 
+      $("#modal-call .btn-back").on("click", function () {
+        $("#modal-file").removeClass("transparent");
+      });
+
       setTimeout(() => {
         MicroModal.show("modal-call");
       }, 300);
