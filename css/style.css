@@ -381,6 +381,7 @@ label,
 textarea,
 input {
   -webkit-appearance: none;
+  appearance: none;
   font-family: "TT Norms";
   border-radius: 0;
 }
@@ -1090,6 +1091,7 @@ section {
 
 .btn {
   -webkit-appearance: none;
+  appearance: none;
   border-radius: 0;
   position: relative;
   color: rgb(34, 34, 34);
