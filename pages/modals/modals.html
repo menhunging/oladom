@@ -113,6 +113,9 @@
                 <br />
                 <br />
                 <a href="#" data-modal="modal-callback">Обратный звонок</a>
+                <br />
+                <br />
+                <a href="#" data-modal="modal-add-basket">Товар добавлен в корзину</a>
             </div>
         </main>
 
@@ -419,6 +422,52 @@
                         Отправляя форму, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="micromodal-slide modal" id="modal-add-basket" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
+    <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+
+            <div class="modal__content" autocomplete="off">
+                <div class="modal__head">
+                    <div class="modal__head__col">
+                        <span class="caption" download="">Товар добавлен в корзину</span>
+                    </div>
+                    <div class="modal__head__col">
+                        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                    </div>
+
+                </div>
+
+                <div class="modal-add-basket__content">
+
+                    <div class="picture-block">
+                        <picture>
+                            <source type="image/webp" srcset="./../../img/pic-catalog1.webp" />
+                            <img src="./../../img/pic-catalog1.png" alt="">
+                        </picture>
+                    </div>
+
+                    <h2 class="caption caption--h2">
+                        КРЕСЛО SCANDI
+                    </h2>
+                    <div class="product-desc">
+                        <span class="product-desc__text">бежевый</span>
+                        <span class="product-desc__text">цвет ножек: черный</span>
+                        <span class="product-desc__text">поверхность: пластик</span>
+                    </div>
+
+                </div>
+
+                <div class="modal__controls">
+                    <a href="#" class="btn btn--border-dark">Продолжить покупки</a>
+                    <a href="#" class="btn btn--yellow">Перейти в корзину</a>
+                </div>
+
             </div>
         </div>
     </div>

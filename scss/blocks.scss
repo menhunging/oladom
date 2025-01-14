@@ -142,14 +142,14 @@
     max-width: 1440px;
     transform: translateX(-50%);
 
-    @include responsive1599 {
-      max-width: 1220px;
-      padding: 0 10px;
-    }
+    // @include responsive1599 {
+    //   max-width: 1220px;
+    //   padding: 0 10px;
+    // }
 
-    @include responsive1439 {
-      max-width: 1020px;
-    }
+    // @include responsive1439 {
+    //   max-width: 1020px;
+    // }
 
     @include responsive1279 {
       max-width: 765px;
@@ -331,13 +331,13 @@
     color: $colorWhite;
     transition: all 0.3s;
 
-    @include responsive1599 {
-      height: 490px;
-    }
+    // @include responsive1599 {
+    //   height: 490px;
+    // }
 
-    @include responsive1439 {
-      height: 390px;
-    }
+    // @include responsive1439 {
+    //   height: 390px;
+    // }
 
     @include responsive1279 {
       height: 325px;
@@ -420,7 +420,7 @@
         linear-gradient(
           360deg,
           rgba(0, 0, 0, 0) 79.29%,
-          rgba(0, 0, 0, 0.4) 98.17%,
+          rgba(0, 0, 0, 0.4) 100%,
           rgba(0, 0, 0, 0.230508) 98.17%
         );
       width: 100%;
@@ -636,13 +636,13 @@
     font-weight: 500;
     line-height: 42px;
 
-    @include responsive1599 {
-      grid-template-columns: calc(50% - 102px) 1fr;
-    }
+    // @include responsive1599 {
+    //   grid-template-columns: calc(50% - 102px) 1fr;
+    // }
 
-    @include responsive1439 {
-      grid-template-columns: 371px 1fr;
-    }
+    // @include responsive1439 {
+    //   grid-template-columns: 371px 1fr;
+    // }
 
     @include responsive1279 {
       font-size: 24px;
@@ -857,15 +857,15 @@
     height: 100%;
     width: calc(120% + 100px);
 
-    @include responsive1599 {
-      left: calc(50% - 102px);
-      width: calc(120% - 69px);
-    }
+    // @include responsive1599 {
+    //   left: calc(50% - 102px);
+    //   width: calc(120% - 69px);
+    // }
 
-    @include responsive1439 {
-      left: calc(50% - 129px);
-      width: calc(120% - 35px);
-    }
+    // @include responsive1439 {
+    //   left: calc(50% - 129px);
+    //   width: calc(120% - 35px);
+    // }
 
     @include responsive1279 {
       left: 50%;
@@ -1158,6 +1158,11 @@
 
     .caterogy-item {
       background-color: rgba(246, 246, 244, 1);
+      padding: 30px 10px 0;
+
+      @include responsive1023 {
+        padding-top: 10px;
+      }
 
       .picture-block {
         @include responsive1279 {
@@ -1169,6 +1174,11 @@
         @include responsive767 {
           height: 140px;
           width: 140px;
+        }
+
+        @include responsive389 {
+          width: 115px;
+          height: 115px;
         }
       }
 
@@ -1182,10 +1192,10 @@
         padding-bottom: 24px;
         padding-top: 24px;
 
-        @include responsive1599 {
-          padding-bottom: 32px;
-          padding-top: 0;
-        }
+        // @include responsive1599 {
+        //   padding-bottom: 32px;
+        //   padding-top: 0;
+        // }
 
         @include responsive1279 {
           padding-bottom: 16px;
@@ -1195,6 +1205,11 @@
         @include responsive767 {
           font-size: 16px;
           line-height: 19px;
+        }
+
+        @include responsive389 {
+          font-size: 14px;
+          padding-top: 10px;
         }
       }
     }
@@ -1356,15 +1371,15 @@
     width: 100%;
     max-width: 80%;
 
-    @include responsive1599 {
-      font-size: 60px;
-      line-height: 65px;
-    }
+    // @include responsive1599 {
+    //   font-size: 60px;
+    //   line-height: 65px;
+    // }
 
-    @include responsive1439 {
-      font-size: 50px;
-      line-height: 55px;
-    }
+    // @include responsive1439 {
+    //   font-size: 50px;
+    //   line-height: 55px;
+    // }
 
     @include responsive767 {
       font-size: 38px;
@@ -1376,6 +1391,7 @@
     font-size: 20px;
     line-height: 24px;
     margin-top: 89px;
+    width: 100%;
 
     @include responsive1439 {
       margin-top: 20px;
@@ -1457,6 +1473,15 @@
 
   .product-desc__text {
     position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 19px;
+      margin-top: 8px;
+    }
 
     &:first-child {
       &::before {
@@ -1502,6 +1527,7 @@
     width: 440px;
     height: 205px;
     margin-left: auto;
+    @include invisLink;
 
     @include responsive1439 {
       width: 330px;
@@ -1596,10 +1622,12 @@
   }
 
   .swiperBtnPrev {
+    background-color: $colorGray;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.7998 5.9998L1.1998 5.99981M1.1998 5.99981L5.9998 10.7998M1.1998 5.99981L5.9998 1.1998' stroke='%23222222' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
   }
 
   .swiperBtnNext {
+    background-color: $colorGray;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.17188 6.0002H10.7719M10.7719 6.0002L5.97188 1.2002M10.7719 6.0002L5.97188 10.8002' stroke='%23222222' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
   }
 }
@@ -1631,6 +1659,31 @@
     gap: 32px;
     margin-top: 32px;
 
+    .product-colors__item {
+      position: relative;
+
+      &:first-child {
+        @include before {
+          right: 8px;
+          top: 8px;
+          width: 32px;
+          height: 32px;
+          background-color: $colorYellow;
+          border-radius: 50%;
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17 1L6 12L1 7' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 12px;
+
+          @include responsive767 {
+            width: 24px;
+            height: 24px;
+            background-size: 8px;
+          }
+        }
+      }
+    }
+
     @include responsive1439 {
       grid-template-columns: repeat(5, 1fr);
     }
@@ -1655,7 +1708,8 @@
   .product-colors__color {
     width: 100%;
     height: 100px;
-    background-size: cover;
+    background-size: 100% 100%;
+    border: solid 1px $colorBlack;
   }
 
   .product-colors__name {
@@ -1899,10 +1953,10 @@
     position: relative;
     margin-left: auto;
 
-    @include responsive1599 {
-      width: 500px;
-      height: 500px;
-    }
+    // @include responsive1599 {
+    //   width: 500px;
+    //   height: 500px;
+    // }
 
     @include responsive1279 {
       width: 374px;
@@ -1977,6 +2031,7 @@
   .marquee-block__text {
     white-space: nowrap;
     display: block;
+    padding: 0 10px;
   }
 }
 
@@ -1997,9 +2052,9 @@
     max-width: 826px;
     position: relative;
 
-    @include responsive1599 {
-      max-width: 50%;
-    }
+    // @include responsive1599 {
+    //   max-width: 50%;
+    // }
 
     @include responsive1279 {
       width: 505px;
@@ -2098,6 +2153,7 @@
         left: 0;
         width: 100%;
         height: 100%;
+        @include invisLink;
 
         img {
           position: absolute;
@@ -2106,16 +2162,17 @@
           width: 486px;
           height: 511px;
           transform: translate(-50%, -50%);
+          object-fit: contain;
 
-          @include responsive1599 {
-            width: 420px;
-            height: 500px;
-          }
+          // @include responsive1599 {
+          //   width: 420px;
+          //   height: 500px;
+          // }
 
-          @include responsive1439 {
-            width: 350px;
-            height: 368px;
-          }
+          // @include responsive1439 {
+          //   width: 350px;
+          //   height: 368px;
+          // }
 
           @include responsive389 {
             width: 210px;
@@ -2136,6 +2193,7 @@
       height: 46px;
       background-color: transparent;
       z-index: 3;
+      margin-top: -24px;
 
       @include responsive767 {
         left: 15px;
@@ -2159,6 +2217,7 @@
       height: 46px;
       background-color: transparent;
       z-index: 3;
+      margin-top: -24px;
 
       @include responsive767 {
         right: 15px;
@@ -2254,6 +2313,16 @@
     width: 100%;
     max-width: 582px;
 
+    .caption--h2 {
+      font-size: 50px;
+      line-height: 55px;
+
+      @include responsive1279 {
+        font-size: 38px;
+        line-height: 40px;
+      }
+    }
+
     @include responsive1439 {
       max-width: 470px;
     }
@@ -2310,6 +2379,17 @@
       top: 100%;
       display: none;
     }
+
+    &.no-active {
+      .product-characteristics-row__color {
+        pointer-events: none;
+
+        &::before {
+          opacity: 0.33;
+          pointer-events: none;
+        }
+      }
+    }
   }
 
   .product-characteristics-row__color {
@@ -2345,6 +2425,9 @@
       width: 26px;
       height: 26px;
       border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.33);
     }
   }
 
@@ -2402,13 +2485,25 @@
     padding: 8px 32px;
     z-index: 3;
     box-shadow: 2px 2px 10px $colorBlack-a3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
-    li + li {
-      margin-top: 10px;
+    li {
+      cursor: pointer;
+      padding: 5px 0;
     }
 
+    .product-item-scu-item-color,
     a {
+      font-size: 20px;
+      line-height: 28px;
       @include text-decoration-hover($colorBlack);
+
+      @include responsive1279 {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
   }
 }
@@ -2573,9 +2668,9 @@
     align-items: flex-start;
     flex: 1;
 
-    @include responsive1599 {
-      padding-right: 30px;
-    }
+    // @include responsive1599 {
+    //   padding-right: 30px;
+    // }
 
     @include responsive767 {
       max-width: 100%;
@@ -2668,6 +2763,10 @@
       }
     }
   }
+
+  p + p {
+    margin-top: 10px;
+  }
 }
 
 .product-adv {
@@ -2709,7 +2808,7 @@
       &:nth-child(1) {
         .product-adv__title {
           &::after {
-            width: 667px;
+            width: 620px;
 
             @include responsive1439 {
               left: calc(100% + 25px);
@@ -2755,12 +2854,16 @@
         }
 
         &::before {
+          left: calc(100% + 430px);
+
           @include responsive1023 {
             left: calc(100% + 100px);
           }
         }
 
         &::after {
+          left: calc(100% + 448px);
+
           @include responsive1023 {
             left: calc(100% + 118px);
           }
@@ -2787,8 +2890,8 @@
         }
 
         &::before {
-          left: calc(100% + 580px);
-          margin-top: -54px;
+          left: calc(100% + 650px);
+          margin-top: -42px;
 
           @include responsive1439 {
             left: calc(100% + 390px);
@@ -2800,8 +2903,8 @@
         }
 
         &::after {
-          left: calc(100% + 598px);
-          margin-top: -36.6px;
+          left: calc(100% + 668px);
+          margin-top: -23.7px;
 
           @include responsive1439 {
             left: calc(100% + 408px);
@@ -2825,11 +2928,12 @@
         }
 
         &::before {
-          left: calc(100% + 318px);
+          left: calc(100% + 528px);
           margin-top: -55px;
         }
+
         &::after {
-          left: calc(100% + 337px);
+          left: calc(100% + 548px);
           margin-top: -36.6px;
         }
       }
@@ -2920,18 +3024,18 @@
     position: absolute;
     top: -60px;
     right: -220px;
-    width: 1186px;
+    width: 1050px;
     height: 882px;
 
-    @include responsive1599 {
-      right: -290px;
-    }
+    // @include responsive1599 {
+    //   right: -290px;
+    // }
 
-    @include responsive1439 {
-      right: -320px;
-      width: 966px;
-      height: 812px;
-    }
+    // @include responsive1439 {
+    //   right: -320px;
+    //   width: 966px;
+    //   height: 812px;
+    // }
 
     @include responsive1023 {
       right: -70px;
@@ -3146,9 +3250,9 @@
     width: 100%;
     max-width: 625px;
 
-    @include responsive1599 {
-      max-width: 550px;
-    }
+    // @include responsive1599 {
+    //   max-width: 550px;
+    // }
 
     @include responsive1279 {
       max-width: 455px;
@@ -3189,6 +3293,7 @@
   }
 
   .link-site {
+    cursor: pointer;
     margin: 0;
     font-size: 16px;
     line-height: 21px;
@@ -3465,7 +3570,7 @@
   }
 
   .caption {
-    max-width: 50%;
+    max-width: 75%;
     width: 100%;
 
     @include responsive1439 {
@@ -3522,15 +3627,15 @@
     align-items: center;
     gap: 16px;
 
-    @include responsive1599 {
-      max-width: 1220px;
-      margin-left: -610px;
-    }
+    // @include responsive1599 {
+    //   max-width: 1220px;
+    //   margin-left: -610px;
+    // }
 
-    @include responsive1439 {
-      max-width: 1020px;
-      margin-left: -510px;
-    }
+    // @include responsive1439 {
+    //   max-width: 1020px;
+    //   margin-left: -510px;
+    // }
 
     @include responsive1279 {
       max-width: 928px;
@@ -3782,7 +3887,7 @@
 
 .market-catalog-inner__catalog {
   position: relative;
-  padding-left: 150px;
+  padding-left: 220px;
 
   @include responsive1279 {
     padding-left: 0;
@@ -3790,6 +3895,13 @@
 }
 
 .catalog {
+  min-height: 900px;
+  margin-bottom: 30px;
+
+  @include responsive1279 {
+    min-height: initial;
+  }
+
   .catalog--title {
     color: rgba(159, 159, 159, 1);
   }
@@ -3814,6 +3926,8 @@
 
   .catalog__item {
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     .caption {
       font-weight: 400;
@@ -3869,11 +3983,14 @@
 
   .catalog__content {
     margin-top: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .product-desc {
     display: block;
-    margin-top: 0;
+    margin-top: 8px;
 
     @include responsive1439 {
       font-size: 16px;
@@ -3887,14 +4004,13 @@
   }
 
   .products-prices {
-    margin-top: 8px;
+    margin-top: auto;
 
     @include responsive767 {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 5px;
-      margin-top: 16px;
       min-height: 60px;
     }
 
@@ -4107,7 +4223,7 @@
 }
 
 .filter {
-  width: 117px;
+  width: 190px;
   position: absolute;
   top: 0;
   height: 100%;
@@ -4121,7 +4237,7 @@
     top: 0;
     z-index: 11;
     padding: 16px;
-    width: 180px;
+    width: 230px;
     overflow: auto;
   }
 
@@ -4224,10 +4340,10 @@
   width: 100%;
   margin-top: 60px;
 
-  @include responsive1599 {
-    min-height: 700px;
-    margin-top: 40px;
-  }
+  // @include responsive1599 {
+  //   min-height: 700px;
+  //   margin-top: 40px;
+  // }
 
   @include responsive1279 {
     min-height: 476px;
@@ -4322,9 +4438,9 @@
     display: flex;
     flex-direction: column;
 
-    @include responsive1599 {
-      min-height: 372px;
-    }
+    // @include responsive1599 {
+    //   min-height: 372px;
+    // }
   }
 
   .picture-block {
@@ -4334,17 +4450,17 @@
     width: 904px;
     height: 473px;
 
-    @include responsive1599 {
-      width: 700px;
-      height: 372px;
-      left: -83px;
-    }
+    // @include responsive1599 {
+    //   width: 700px;
+    //   height: 372px;
+    //   left: -83px;
+    // }
 
-    @include responsive1439 {
-      width: 556px;
-      height: 372px;
-      left: -60px;
-    }
+    // @include responsive1439 {
+    //   width: 556px;
+    //   height: 372px;
+    //   left: -60px;
+    // }
 
     @include responsive1279 {
       left: -140px;
@@ -4364,13 +4480,13 @@
     margin-left: auto;
     margin-top: auto;
 
-    @include responsive1599 {
-      max-width: 520px;
-    }
+    // @include responsive1599 {
+    //   max-width: 520px;
+    // }
 
-    @include responsive1439 {
-      max-width: 457px;
-    }
+    // @include responsive1439 {
+    //   max-width: 457px;
+    // }
 
     @include responsive1023 {
       max-width: 100%;
@@ -4385,7 +4501,7 @@
     color: rgba(159, 159, 159, 1);
     position: relative;
     margin-bottom: 40px;
-    display: block;
+    display: table;
 
     @include before {
       left: 0;
@@ -4406,9 +4522,9 @@
       font-size: 20px;
       line-height: 23px;
 
-      @include responsive1599 {
-        height: 50px;
-      }
+      // @include responsive1599 {
+      //   height: 50px;
+      // }
 
       @include responsive1023 {
         font-family: 16px;
@@ -4438,12 +4554,12 @@
     height: 70px;
     font-weight: 400;
 
-    @include responsive1599 {
-      height: 50px;
-      min-height: initial;
-      background-size: 20px;
-      padding: 0 16px;
-    }
+    // @include responsive1599 {
+    //   height: 50px;
+    //   min-height: initial;
+    //   background-size: 20px;
+    //   padding: 0 16px;
+    // }
 
     @include responsive1023 {
       font-family: 16px;
@@ -4490,13 +4606,13 @@
     padding: 32px 95px 32px 32px;
     background-color: rgba(246, 246, 244, 1);
 
-    @include responsive1599 {
-      width: 670px;
-    }
+    // @include responsive1599 {
+    //   width: 670px;
+    // }
 
-    @include responsive1439 {
-      width: 550px;
-    }
+    // @include responsive1439 {
+    //   width: 550px;
+    // }
 
     @include responsive1279 {
       width: 536px;
@@ -4564,15 +4680,15 @@
     left: 50%;
     top: 78px;
 
-    @include responsive1599 {
-      width: 609px;
-      height: 404px;
-    }
+    // @include responsive1599 {
+    //   width: 609px;
+    //   height: 404px;
+    // }
 
-    @include responsive1439 {
-      width: 50%;
-      height: 320px;
-    }
+    // @include responsive1439 {
+    //   width: 50%;
+    //   height: 320px;
+    // }
 
     @include responsive1279 {
       width: 460px;
@@ -4598,7 +4714,11 @@
 }
 
 .delivery-adv {
-  padding: 60px 0;
+  padding: 60px 80px;
+
+  // @include responsive1599 {
+  //   padding: 60px 30px;
+  // }
 
   @include responsive1279 {
     padding: 16px 0;
@@ -4606,11 +4726,16 @@
 
   ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 397px 357px;
     gap: 32px;
+
+    // @include responsive1599 {
+    //   grid-template-columns: 1fr 300px 300px;
+    // }
 
     @include responsive1279 {
       gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @include responsive767 {
@@ -4625,13 +4750,11 @@
       gap: 16px;
     }
 
-    &:not(:first-child){
-      p{
+    &:not(:first-child) {
+      p {
         max-width: 330px;
       }
     }
-
-
   }
 
   .delivery-adv__icon {
@@ -4997,9 +5120,9 @@
     width: 100%;
     max-width: 707px;
 
-    @include responsive1599 {
-      max-width: 580px;
-    }
+    // @include responsive1599 {
+    //   max-width: 580px;
+    // }
 
     @include responsive1279 {
       max-width: 455px;
@@ -5045,17 +5168,17 @@
     width: 924px;
     height: 447px;
 
-    @include responsive1599 {
-      left: calc(50% + 37px);
-      width: 725px;
-      height: 427px;
-    }
+    // @include responsive1599 {
+    //   left: calc(50% + 37px);
+    //   width: 725px;
+    //   height: 427px;
+    // }
 
-    @include responsive1439 {
-      left: calc(50% + 97px);
-      width: 543px;
-      height: 347px;
-    }
+    // @include responsive1439 {
+    //   left: calc(50% + 97px);
+    //   width: 543px;
+    //   height: 347px;
+    // }
 
     @include responsive1279 {
       height: 290px;
@@ -5577,6 +5700,10 @@
     width: 100%;
 
     @include responsive1279 {
+      padding: 18px 18px;
+    }
+
+    @include responsive767 {
       padding: 18px 0;
     }
   }
@@ -5712,13 +5839,13 @@
   width: 100%;
   max-width: 980px;
 
-  @include responsive1599 {
-    max-width: 900px;
-  }
+  // @include responsive1599 {
+  //   max-width: 900px;
+  // }
 
-  @include responsive1439 {
-    max-width: 690px;
-  }
+  // @include responsive1439 {
+  //   max-width: 690px;
+  // }
 
   @include responsive1279 {
     max-width: 590px;
@@ -5736,10 +5863,10 @@
   display: flex;
   flex-direction: column;
 
-  @include responsive1599 {
-    width: 300px;
-    padding: 24px;
-  }
+  // @include responsive1599 {
+  //   width: 300px;
+  //   padding: 24px;
+  // }
 
   @include responsive1279 {
     padding: 16px;
@@ -5861,11 +5988,11 @@
     gap: 32px;
     position: relative;
 
-    @include responsive1599 {
-      display: grid;
-      grid-template-columns: 160px minmax(312px, calc(100% - 355px)) 86px;
-      gap: 16px;
-    }
+    // @include responsive1599 {
+    //   display: grid;
+    //   grid-template-columns: 160px minmax(312px, calc(100% - 355px)) 86px;
+    //   gap: 16px;
+    // }
 
     @include responsive1279 {
       grid-template-columns: 160px minmax(282px, calc(100% - 355px)) 86px;
@@ -5909,9 +6036,9 @@
     &:nth-child(2) {
       max-width: 368px;
 
-      @include responsive1599 {
-        max-width: initial;
-      }
+      // @include responsive1599 {
+      //   max-width: initial;
+      // }
 
       @include responsive767 {
         grid-column: 2 / 4;
@@ -5960,6 +6087,9 @@
     display: inline;
 
     .product-desc__text {
+      font-size: 14px;
+      line-height: 16px;
+
       & + .product-desc__text {
         margin-left: 6px;
       }
@@ -5970,7 +6100,7 @@
     position: absolute;
     right: 0;
     top: 50%;
-    margin-top: -39px;
+    margin-top: -12.5px;
 
     @include responsive1023 {
       right: 10px;
@@ -5991,10 +6121,10 @@
   height: 161px;
   border: solid 1px rgba(159, 159, 159, 1);
 
-  @include responsive1599 {
-    width: 160px;
-    height: 130px;
-  }
+  // @include responsive1599 {
+  //   width: 160px;
+  //   height: 130px;
+  // }
 
   @include responsive479 {
     width: 130px;
@@ -6017,10 +6147,10 @@
       justify-content: center;
       align-items: center;
 
-      @include responsive1599 {
-        width: 103px;
-        height: 108px;
-      }
+      // @include responsive1599 {
+      //   width: 103px;
+      //   height: 108px;
+      // }
     }
   }
 
@@ -6059,10 +6189,10 @@
   color: $colorBlack;
   white-space: nowrap;
 
-  @include responsive1599 {
-    font-size: 18px;
-    line-height: 20px;
-  }
+  // @include responsive1599 {
+  //   font-size: 18px;
+  //   line-height: 20px;
+  // }
 
   .old {
     font-size: 20px;
@@ -6078,6 +6208,10 @@
 .basket-line {
   & + .basket-line {
     margin-top: 32px;
+
+    @include responsive767 {
+      margin-top: 16px;
+    }
   }
 }
 
@@ -6625,54 +6759,54 @@
     flex-wrap: wrap;
     margin-bottom: 60px;
 
-    @include responsive1599 {
-      margin-bottom: 30px;
-    }
+    // @include responsive1599 {
+    //   margin-bottom: 30px;
+    // }
   }
 
-  .news-main {
-    .picture-block {
-      width: 425px;
-      height: 300px;
+  // .news-main {
+  //   .picture-block {
+  //     width: 425px;
+  //     height: 300px;
 
-      @include responsive1439 {
-        width: 375px;
-        height: 300px;
-      }
+  //     @include responsive1439 {
+  //       width: 375px;
+  //       height: 300px;
+  //     }
 
-      @include responsive1279 {
-        width: 305px;
-        height: 230px;
-      }
+  //     @include responsive1279 {
+  //       width: 305px;
+  //       height: 230px;
+  //     }
 
-      @include responsive767 {
-        height: auto;
-        width: 100%;
-      }
-    }
-  }
+  //     @include responsive767 {
+  //       height: auto;
+  //       width: 100%;
+  //     }
+  //   }
+  // }
 
   .news-main__item--first {
     margin-bottom: 60px;
     grid-template-columns: 441px 1fr;
 
-    @include responsive1599 {
-      margin-bottom: 30px;
-    }
+    // @include responsive1599 {
+    //   margin-bottom: 30px;
+    // }
 
     .picture-block {
       width: 900px;
       height: 500px;
 
-      @include responsive1599 {
-        width: 720px;
-        height: 350px;
-      }
+      // @include responsive1599 {
+      //   width: 720px;
+      //   height: 350px;
+      // }
 
-      @include responsive1439 {
-        width: 560px;
-        height: 320px;
-      }
+      // @include responsive1439 {
+      //   width: 560px;
+      //   height: 320px;
+      // }
 
       @include responsive1279 {
         width: 530px;
@@ -6731,6 +6865,21 @@
 
     @include responsive1279 {
       max-width: 472px;
+    }
+  }
+
+  ul{
+    width: 100%;
+    max-width: 936px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -30px;
+    margin-top: -30px;
+    list-style-type: disc;
+
+    @include responsive1439 {
+      margin-bottom: -15px;
+      margin-top: -15px;
     }
   }
 
@@ -6795,14 +6944,14 @@
   justify-content: flex-end;
   padding: 150px 0;
 
-  @include responsive1599 {
-    padding: 100px 0;
-    height: 780px;
-  }
+  // @include responsive1599 {
+  //   padding: 100px 0;
+  //   height: 780px;
+  // }
 
-  @include responsive1439 {
-    height: 680px;
-  }
+  // @include responsive1439 {
+  //   height: 680px;
+  // }
 
   @include responsive1279 {
     height: 575px;
@@ -6818,13 +6967,13 @@
     max-width: 62%;
     color: $colorWhite;
 
-    @include responsive1599 {
-      max-width: calc(75% - 5px);
-    }
+    // @include responsive1599 {
+    //   max-width: calc(75% - 5px);
+    // }
 
-    @include responsive1439 {
-      max-width: 890px;
-    }
+    // @include responsive1439 {
+    //   max-width: 890px;
+    // }
 
     @include responsive1279 {
       max-width: 640px;
@@ -6879,5 +7028,550 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+}
+
+#modal-add-basket {
+  .modal__container {
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal__content {
+    padding: 30px;
+  }
+
+  .modal-add-basket__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .caption {
+      font-size: 30px;
+      line-height: 40px;
+
+      @include responsive479 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .picture-block {
+    width: 100%;
+    height: 320px;
+    margin-top: 20px;
+
+    @include responsive479 {
+      height: 240px;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .product-desc {
+    margin-top: 0;
+
+    @include responsive639 {
+      gap: 0px 13px;
+    }
+  }
+
+  .modal__controls {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+
+    @include responsive639 {
+      flex-direction: column;
+    }
+
+    .btn {
+      font-size: 16px;
+      line-height: 18px;
+      width: 50%;
+
+      @include responsive639 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.not-section {
+  .caption {
+    @include responsive767 {
+      text-align: center;
+      font-size: 30px;
+      line-height: 32px;
+    }
+
+    @include responsive389 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .not-section__controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+
+    @include responsive767 {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      font-size: 20px;
+      line-height: 24px;
+
+      @include responsive1279 {
+        padding: 10px;
+      }
+
+      @include responsive767 {
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  }
+}
+
+.js-add-basket {
+  &::before {
+    background-image: none !important;
+  }
+}
+
+// оформление заказа
+
+.basket {
+  .bx-soa-item-tr {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+    @include responsive767 {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  @include responsive767 {
+    .bx-soa-item-td {
+      width: 100% !important;
+      min-width: initial !important;
+    }
+
+    .bx-soa-item-properties.bx-text-right .bx-soa-item-td-title,
+    .bx-soa-item-properties.bx-text-right .bx-soa-item-td-text {
+      text-align: left;
+    }
+  }
+
+  .bx-soa-section-content {
+    display: block !important;
+
+    @include responsive767 {
+      padding: 0;
+    }
+  }
+
+  .bx-soa-item-td {
+    border: 0;
+  }
+
+  .bx-soa-item-content {
+    padding-top: 0 !important;
+  }
+
+  .bx-soa-item-content .bx-scu-container {
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .bx-soa-item-tr-first {
+    display: none !important;
+  }
+
+  .checkout-item {
+    border: 0 !important;
+  }
+
+  #bx-soa-order.bx-site {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include responsive1023 {
+      flex-direction: column;
+      padding: 0 15px;
+    }
+
+    @include responsive639 {
+      padding: 0 5px;
+    }
+  }
+
+  .checkout-item__head {
+    background-color: transparent;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 32px;
+    color: rgba(159, 159, 159, 1);
+  }
+
+  .btn-default{
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    position: relative;
+    color: $colorBlack;
+    border: 1px solid transparent;
+    display: inline-block;
+    transition: all 0.3s;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 17px;
+    background-color: $colorYellow;
+    color: $colorBlack;
+  }
+
+  .bx-sls {
+    .dropdown-icon {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .bx-ui-sls-container {
+      min-height: 70px;
+    }
+
+    .bx-ui-sls-clear {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .bx-ui-sls-fake,
+    .bx-sls .bx-ui-sls-route {
+      width: 100%;
+      height: 70px;
+    }
+  }
+
+  .bx-soa-more {
+    border: 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bx-soa-tooltip.bx-soa-tooltip-danger .tooltip-inner {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  .bx-soa-more-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bx-sls .bx-ui-sls-pane {
+    top: 70px;
+  }
+
+  .bx-soa-customer-label,
+  .bx-soa-custom-label {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .form-control {
+    width: 100%;
+    height: 70px;
+
+    @include responsive1279 {
+      height: 50px;
+    }
+  }
+
+  .form-group {
+    & + .form-group {
+      margin-top: 32px;
+
+      @include responsive1279 {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .row {
+    .col-sm-12 {
+      & + .col-sm-12 {
+        margin-top: 32px;
+
+        @include responsive1279 {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  #bx-soa-properties {
+    .bx-soa-more-btn {
+      margin-top: 10px;
+    }
+
+    .form-control {
+      width: 100%;
+      height: 70px;
+      padding: 0 15px;
+      font-size: 18px;
+      line-height: 24px;
+      background-color: transparent;
+
+      @include responsive1279 {
+        height: 50px;
+      }
+    }
+  }
+
+  .bx-soa-section-title,
+  .bx-soa-section-title-container {
+    background-color: transparent;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+    color: rgba(159, 159, 159, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include responsive767 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  .bx-soa-section.bx-selected .bx-soa-section-title {
+    background-color: transparent;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+    color: rgba(159, 159, 159, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #bx-soa-delivery {
+    border: 0;
+  }
+
+  .bx-soa-pp {
+    .bx-soa-pp-item-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 23px;
+
+      @include responsive1279 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      @include responsive767 {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .bx-soa-pp-company-graf-container {
+    padding-top: 0;
+    width: 136px;
+    height: 77px;
+    cursor: pointer;
+
+    @include responsive1279 {
+      height: 50px;
+    }
+  }
+
+  .bx-soa-pp-company-selected {
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+    img {
+      width: 70px;
+      height: 70px !important;
+      object-fit: contain;
+    }
+  }
+
+  .bx-soa-pp-company-smalltitle {
+    margin-top: 16px;
+  }
+
+  .bx-soa-pp-desc-container {
+    margin-bottom: 10px;
+  }
+
+  .bx-bd-waring {
+    border: 0;
+  }
+
+  .bx-soa-pp-company-graf-container {
+    border: solid 2px $colorGray;
+  }
+
+  #bx-soa-paysystem {
+    border: 0;
+    padding: 0;
+
+    .bx-soa-pp {
+      .bx-soa-pp-desc-container {
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+
+    .bx-soa-more {
+      margin-top: 20px;
+    }
+  }
+
+  .bx-soa-section.bx-selected .bx-soa-section-title-container {
+    padding: 0;
+
+    @include responsive767 {
+      padding-bottom: 20px;
+    }
+  }
+
+  .bx-soa-cart-total-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & + .bx-soa-cart-total-line {
+      margin-top: 16px;
+    }
+  }
+
+  .bx-soa-cart-total {
+    margin-top: 20px;
+    width: 100% !important;
+  }
+
+  .bx-soa-cart-total {
+    padding: 0;
+    border: 0;
+  }
+
+  .checkout-item {
+    & + .checkout-item {
+      @include responsive767 {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+// /оформление заказа
+
+.filter-selected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 60px;
+  margin-top: -32px;
+
+  @include responsive1279{
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .filter-selected__col {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 8px;
+    border: solid 1px rgba(159, 159, 159, 1);
+  }
+
+  .filter-selected__delete {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 1L1 11M1 1L11 11' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+
+  .filter-selected__all {
+  }
+}
+
+.market-catalog-controls{
+  background-color: $colorWhite;
+  padding-top: 0;
+  overflow: hidden;
+
+  .cooperation-market{
+    &::before{
+      display: none;
+    }
+  }
+}
+
+.filter-inner{
+  position: sticky;
+  top:100px;
+  left:0;
+  width: 100%;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+
+  @include responsive1279{
+    top:0;
+    position: relative;
+    max-height: initial;
   }
 }
